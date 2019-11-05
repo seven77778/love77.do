@@ -1,6 +1,6 @@
 {
-  
-    "configurations": [{
+  "configurations": [
+    {
       "type": "chrome",
       "request": "launch",
       "name": "启动 Chrome 并打开 localhost",
@@ -19,6 +19,7 @@
       "type": "chrome",
       "request": "launch",
       "sourceMaps": false,
-      "file": "${workspaceRoot}/1/index.html"
-    }]
-  }
+      "file": "${workspaceRoot}/77/77.html"
+    }
+  ]
+}

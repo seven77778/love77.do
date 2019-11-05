@@ -1,0 +1,10 @@
+新建文件夹
+终端进去 
+git init 
+git remote add origin https://github.com/seven77778/html.git
+
+git pull / git pull origin master
+
+git status 
+
+git push origin master

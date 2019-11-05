@@ -1,0 +1,14 @@
+p{
+  background-color: #DDE7DE;
+}
+
+
+
+li{
+  background-color: #59B3D1;
+  color: #FFFFFF;
+  list-style: none;
+  display: inline;
+
+  font-size: 10px;
+}

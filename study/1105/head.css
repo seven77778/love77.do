@@ -1,0 +1,27 @@
+body{
+  background-color: #DDE7DE  ;
+}
+
+.d10{
+  color: #fff;
+  font-size: 20px;
+}
+.d11{
+  color: #548D96;
+}
+
+.d21{
+  
+  width: 80px;
+  height:30px;
+  /* width height 和display:inline-block;共存，必须块状  */
+  display:inline-block; 
+  color: #fff;
+  background: #548D96;
+  text-align:center;
+}
+
+a{
+  text-decoration:none;
+  color: #fff;
+}

@@ -1,0 +1,45 @@
+<html>
+
+<head>
+
+  <style>
+    /* display - flex  消除了两个容器之间的缝隙 */
+    form {
+      display: flex;
+      /* align-self继承align-items  */
+      align-items: center;
+    }
+
+    /* 输入框占据当前行的所有剩余宽度，只需要指定输入框的flex-grow属性为1 ，0是不拉伸*/
+    /*  flex-start：顶边对齐，高度不拉伸
+    flex-end：底边对齐，高度不拉伸
+    center：居中，高度不拉伸
+    stretch ：默认值，高度自动拉伸 */
+    input {
+      /* flex-grow: 0; */
+      flex-grow: 1;
+      align-self: stretch;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <form>
+    <input type="email" name="email">
+    <button type="submit">Send</button>
+    <button type="button">111
+
+      <!-- 弹性布局默认不改变项目的宽度，但是它默认改变项目的高度。如果项目没有显式指定高度，就将占据容器的所有高度 -->
+      <!-- <img src="flex.svg" alt=""> -->
+      <!-- <embed src="flex.jpg" /> -->
+
+    </button>
+  </form>
+
+
+
+</body>
+
+</html>

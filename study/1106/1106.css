@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+body {
+  min-width:100%; /*最小宽度*/
+  max-width:100%; /*最大宽度*/
+  margin: 0 auto;
+ 
+}
+
+header {
+  width: 100%;/*继承body的宽度   body：540*/
+  height: 100px;
+}
+header img {
+  width: 100%; /*继承父亲的宽度*/
+  height: 100%;
+}

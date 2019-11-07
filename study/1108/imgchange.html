@@ -1,0 +1,29 @@
+<!-- 图片切换 -->
+
+<html>
+
+<head>
+
+
+</head>
+
+<body>
+
+  <img src="1.png">
+
+  <script>
+    let myImage = document.querySelector('img');
+
+    myImage.onclick = function () {
+      let mySrc = myImage.getAttribute('src');
+      if (mySrc === '2.jpg') {
+        myImage.setAttribute('src', '1.png');
+      } else {
+        myImage.setAttribute('src', '2.jpg');
+      }
+    }
+  </script>
+
+</body>
+
+</html>

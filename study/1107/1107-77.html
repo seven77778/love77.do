@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .jiao-left {
+      float: left;
+      width: 4px;
+      height: 80px;
+      background-color: #A4CA39;
+      transform: rotate(-30deg);
+      position: relative;
+      top: 200px;
+      left: 100px;
+
+    }
+
+
+    .jiao-right {
+      float: left;
+      width: 4px;
+      height: 80px;
+      background-color: #A4CA39;
+      transform: rotate(30deg);
+      position: relative;
+      left: 250px;
+      top: 200px;
+    }
+
+
+    .header {
+      float: left;
+      top: 260px;
+      left: 70px;
+      width: 200px;
+      height: 100px;
+      border-radius: 100px 100px 0 0;
+      background-color: #A4CA39;
+      position: relative;
+    }
+
+    .eye-left {
+      width: 25px;
+      height: 25px;
+      border-radius: 100%;
+      background: white;
+      position: relative;
+      left: 130px;
+      top: 315px;
+    }
+
+    .eye-right {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: white;
+      position: relative;
+      left: 200px;
+      top: 290px;
+    }
+
+    .body {
+      width: 200px;
+      height: 230px;
+      background-color: #A4CA39;
+      border-radius: 0 0 10% 10%;
+      position: relative;
+      top: 330px;
+      left: 80px;
+    }
+
+
+
+    .hand-left {
+      width: 50px;
+      height: 230px;
+      background-color: #A4CA39;
+      border-radius: 25px 25px 25px 25px;
+      position: relative;
+      top: 100px;
+      left: 20px;
+      transition: left 0.1s;
+
+    }
+
+    .hand-left:hover {
+      left: 0px;
+    }
+
+    .hand-right {
+      width: 50px;
+      height: 230px;
+      background-color: #A4CA39;
+      border-radius: 25px 25px 25px 25px;
+      position: relative;
+      top: -130px;
+      left: 290px;
+      transition: right 1s;
+    }
+
+    .hand-right:hover {
+      left: 310px;
+    }
+
+    .foot-left {
+      width: 50px;
+      height: 100px;
+      background-color: #A4CA39;
+      position: relative;
+      left: 120px;
+      top: -130px;
+    }
+
+    .foot-right {
+      width: 50px;
+      height: 100px;
+      background-color: #A4CA39;
+      position: relative;
+      left: 180px;
+      top: -230px;
+    }
+
+    .car {
+      width: 500px;
+      height: 250px;
+      border-radius: 250px 250px 0 0;
+      background-color: #FFA500;
+      position: relative;
+      left: 25px;
+      top: -70px;
+    }
+
+    .car-left {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #A4CA39;
+      position: relative;
+      top: -120px;
+      left: 50px;
+      transform: rotate(80deg);
+      text-align: center;
+    }
+
+    .car-right {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #A4CA39;
+      position: relative;
+      top: -270px;
+      left: 350px;
+      transform: rotate(-280deg);
+      text-align: center;
+    }
+
+    #ab {
+      background-color: blue;
+      width: 700px;
+      height: 700px;
+      top: -650px;
+      left: 400px;
+    }
+
+    .a1 {
+      width: 600px;
+      height: 280px;
+      border: 15px solid black;
+      border-radius: 300px 300px 0 0;
+      background-color: red;
+      position: relative;
+      top: 35px;
+      left: 25px;
+      transition: top 1s;
+    }
+
+    .a1:hover {
+      top: -800px;
+    }
+
+    .a2 {
+      width: 600px;
+      height: 280px;
+      border: 15px solid black;
+      border-radius: 0 0 300px 300px;
+      background-color: white;
+      position: relative;
+      top: 35px;
+      left: 25px;
+    }
+
+    .b1 {
+      width: 200px;
+      height: 200px;
+      border: 15px solid black;
+      border-radius: 50%;
+      background: white;
+      position: relative;
+      top: -375px;
+      left: 225px;
+
+    }
+
+    .b2 {
+      width: 100px;
+      height: 100px;
+      background: white;
+      border: 5px solid black;
+      border-radius: 50%;
+      position: relative;
+      box-shadow: 5px 5px 5px black;
+      top: -545px;
+      left: 283px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="jiao-left"></div>
+  <div class="jiao-right"></div>
+  <div class="header"></div>
+  <div class="eye-left"></div>
+  <div class="eye-right"></div>
+  <div class="body"></div>
+  <div class="hand-left"></div>
+  <div class="hand-right"></div>
+  <div class="foot-left"></div>
+  <div class="foot-right"></div>
+  <div class="car"></div>
+  <div class="car-left">
+    a
+  </div>
+  <div class="car-right">
+    a
+  </div>
+  <div id="ab">
+    <div class="a1">
+    </div>
+    <div class="a2"></div>
+    <div class="b1"></div>
+    <div class="b2"></div>
+  </div>
+</body>
+
+</html>

@@ -11,3 +11,7 @@
 
  代码格式化 eslint
  自动中文乱码 GBKtoUTF8 
+
+
+js 学习网站
+1. https://wiki.developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics

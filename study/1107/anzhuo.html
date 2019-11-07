@@ -1,0 +1,109 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>安卓机器人</title>
+</head>
+<style>
+  .android {
+    width: 500px;
+    height: 500px;
+    border: 1px solid #ccc;
+    margin: 100px auto;
+  }
+
+  .head {
+    position: relative;
+    width: 250px;
+    height: 125px;
+    background-color: yellowgreen;
+    margin: 0px auto 10px;
+    border-radius: 125px 125px 0 0;
+  }
+
+  .head::before,
+  .head::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 40px;
+  }
+
+  .head::before {
+    left: 60px;
+  }
+
+  .head::after {
+    right: 60px;
+  }
+
+  .body {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background-color: yellowgreen;
+    margin: 0 auto;
+    border-radius: 0 0 20px 20px;
+
+  }
+
+  .body::before,
+  .body::after {
+    content: "";
+    position: absolute;
+    background-color: yellowgreen;
+    width: 30px;
+    height: 180px;
+    border-radius: 10px;
+    top: 20px;
+  }
+
+  .body::before {
+    left: -40px;
+  }
+
+  .body::after {
+    right: -40px;
+  }
+
+  .foot {
+    position: relative;
+    margin: 0 auto;
+    width: 250px;
+    height: 125px;
+  }
+
+  .foot::before,
+  .foot::after {
+    content: "";
+    position: absolute;
+    background-color: yellowgreen;
+    width: 30px;
+    height: 100px;
+    border-radius: 0 0 10px 10px;
+    top: 0px;
+  }
+
+  .foot::before {
+    left: 60px;
+  }
+
+  .foot::after {
+    right: 60px;
+  }
+</style>
+
+<body>
+  <div class="android">
+    <div class="head"></div>
+    <div class="body"></div>
+    <div class="foot"></div>
+  </div>
+</body>
+
+</html>

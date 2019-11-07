@@ -1,0 +1,66 @@
+<html>
+
+<head>
+  <style>
+    /*div1一定要包容eye*/
+    #div1 {
+      width: 400px;
+      height: 200px;
+      background: #FFA500;
+      border-radius: 200px 200px 0 0;
+      position: relative;
+      left: 500px;
+      /*相对定位*/
+    }
+
+    #eye1 {
+      width: 80px;
+      height: 80px;
+      border-radius: 50px;
+      background-color: #CCCCCC;
+      position: absolute;
+      /*绝对定位*/
+      bottom: -40px;
+      right: 80px;
+
+    }
+
+    #eye2 {
+      width: 80px;
+      height: 80px;
+      border-radius: 50px;
+      background-color: #CCCCCC;
+      position: absolute;
+      /*绝对定位*/
+      bottom: -40px;
+      right: 240px;
+    }
+
+    #eyepig {
+      width: 20px;
+      height: 20px;
+      border-radius: 50px;
+      background-color: black;
+      position: absolute;
+      /*绝对定位*/
+      bottom: 50px;
+      right: 20px;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div id="div1">
+    <div id="eye1">
+      <div id="eyepig"></div>
+    </div>
+    <div id="eye2">
+      <div id="eyepig"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>

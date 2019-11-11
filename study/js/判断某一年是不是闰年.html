@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+</head>
+
+<body>
+
+  <input id="inputyear" type="text">
+  <button onclick="isLeapYear()">请输入年份</button>
+  <div id="result"></div>
+
+
+  <script>
+    function isLeapYear() {
+      // let myName = prompt('请输入你的名字。');
+
+      // console.log(myName);
+
+      var year = parseInt(document.getElementById("inputyear").value);
+      console.log(year);
+      if (!isNaN(year)) {
+        if (year % 4 == 0 && year % 100 != 0) {
+          document.getElementById("result").innerHTML = "是闰年";
+        } else {
+          document.getElementById("result").innerHTML = "不是闰年";
+        }
+      } else {
+        document.getElementById("result").innerHTML = "输入的不是数字";
+      }
+    }
+
+  </script>
+</body>
+
+</html>

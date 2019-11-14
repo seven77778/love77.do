@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <hr>
+  方式一：
+  <hr>
+  <input type="radio" name="demo" />单选1
+  <input type="radio" name="demo" />单选2
+  <input type="radio" name="demo" />单选3
+  <input type="radio" name="demo" />单选4
+  <input type="radio" name="demo" />单选5
+
+  <p>传统的input + radio 单选，体验不好 </p>
+
+  <hr>
+  方式二： for 属性规定 label 与哪个表单元素绑定。
+
+  <hr>
+  <input type="radio" name="demo" id="temp1" /><label for="temp1111">单选1</label>
+  <input type="radio" name="demo" id="temp2" /><label for="temp21">单选2</label>
+  <input type="radio" name="demo" id="temp3" /><label for="temp31">单选3</label>
+  <input type="radio" name="demo" id="temp4" /><label for="temp41">单选4</label>
+  <input type="radio" name="demo" id="temp5" /><label for="temp51">单选5</label>
+
+  <hr>
+  方式三：省略了label中的for元素
+  <hr>
+  <label><input type="radio" name="demo" />单选1</label>
+  <label><input type="radio" name="demo" />单选2</label>
+  <label><input type="radio" name="demo" />单选3</label>
+  <label><input type="radio" name="demo" />单选4</label>
+  <label><input type="radio" name="demo" />单选5</label>
+
+</body>
+
+</html>

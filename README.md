@@ -15,3 +15,8 @@
 
 js 学习网站
 1. https://wiki.developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/JavaScript_basics
+
+作业：
+
+1114作业：
+https://wiki.developer.mozilla.org/zh-CN/docs/Learn/JavaScript/First_steps/Silly_story_generator

@@ -1,0 +1,70 @@
+<html>
+
+
+<head>
+  <style>
+    div {
+      color: red;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <script type="text/javascript">
+    var rest = 5;
+    function getTimebySetTime() {
+      rest--;
+      if (rest >= 0) {
+        document.getElementById("time").innerText = "倒计时：... " + rest;
+      } else {
+        document.getElementById("time").innerText = "倒计时：end ";
+      }
+
+      // setTimeout 是延迟一秒执行自己
+      setTimeout(function () {
+        getTimebySetTime();
+      }, 1000);
+    }
+
+
+
+    // 不行，失败了的
+    function getTimebyInterval() {
+      rest--;
+      if (rest >= 0) {
+        document.getElementById("setInterval").innerText = "倒计时：... " + rest;
+      } else {
+        document.getElementById("setInterval").innerText = "倒计时：end ";
+      }
+
+      setInterval(function () {
+        getTimebyInterval();
+      }, 1000);
+    }
+
+    //ok 的
+    function have2() {
+      let timer = null;
+      let number = 10;
+      timer = setInterval(() => {
+        document.getElementById("have2").innerText = number;
+        number > 0 ? number = number - 1 :
+          (number = 10, clearInterval(timer))
+      }, 1000);
+    };
+  </script>
+
+  <button onclick="getTimebySetTime()">setTime</button>
+  <br>
+  <div id="time"></div>
+  <button onclick="getTimebyInterval()">setInterval</button>
+  <div id="setInterval"></div>
+
+  <button onclick="have2()">okk</button>
+  <div id="have2"></div>
+
+</body>
+
+</html>

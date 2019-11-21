@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script type="text/javascript">
+    var countdown = 60;
+    function settime(val) {
+      if (countdown == 0) {
+        val.removeAttribute("disabled");
+        val.value = "免费获取验证码";
+        countdown = 60;
+      } else {
+        val.setAttribute("disabled", true);
+        val.value = "重新发送(" + countdown + ")";
+        countdown--;
+      }
+
+      setTimeout(function () {
+        settime(val)
+      }, 1000)
+    } 
+  </script>
+
+</head>
+
+<body>
+  <input type="button" id="btn" value="点击进行倒计时" onclick="settime(this)" />
+
+</body>
+
+</html>

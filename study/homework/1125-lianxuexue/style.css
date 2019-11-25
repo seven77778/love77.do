@@ -1,0 +1,504 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body{
+  width: 90%;
+}
+/* nav start*/
+.nav{
+  width: 100%;
+  height: 50px;
+  background: #000;
+  text-align: center;
+  /* position: absolute; */
+}
+.nav-left{
+  /*position: absolute;*/
+  padding-left: 150px;
+  float: left;
+  padding-top: 10px;
+}
+.nav-left1{
+  font-size: 15px;
+  color: #fff;
+  float: left;
+  margin-left: 50px;
+  padding-top: 10px;
+ /* position: absolute;
+  margin-left: 280px;*/
+}
+.nav-center{
+  font-size: 15px;
+  width: 550px;
+  height: 40px;
+  float: left;
+  padding-top: 10px;
+  /*margin-left: 500px;*/
+}
+.nav-center a{
+  padding-left: 50px;
+  float: left;
+  color: #fff;
+  text-decoration-line: none;
+}
+.nav-center a:hover{
+  color: rgb(14, 141, 226);
+}
+.nav-right{
+  width: 80px;
+  height: 50px;
+  color: #fff;
+  display: block;
+  float: left;
+  margin-left: 80px;
+  padding: 10px 20px;
+  /*margin-left: 1160px;
+  margin-top: -50px;*/
+}
+.nav-right a{
+  float: left;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+.nav-right:hover{
+  background:rgb(14, 141, 226);
+}
+.nav-right1{
+  width: 80px;
+  height: 50px;
+  color: #fff;
+  display: block;
+  float: left;
+  margin-left: 20px;
+  padding: 10px 20px;
+}
+.nav-right1 a{
+  color: #fff;
+  float: left;
+  display: block;
+  text-decoration: none;
+}
+.nav-right1:hover{
+  background:rgb(14, 141, 226);
+}
+/*主页大图*/
+.headpic{
+  background: url(pic/bigbig.png);
+
+  width: 100%;
+  height: 345px;
+  background-size: contain;
+
+}
+/*身体的第一部分*/
+.bodyone{
+  width: 100%;
+  height: 405px;
+  position: relative;
+  top: 25px;
+}
+.bodyone ul li{
+  float: left;
+}
+.onetop{
+  width: 100%;
+  height: 130px;
+  text-align: center;
+  padding-top: 80px;
+  font-size: 23px;
+  color: rgb(66, 65, 65);
+}
+.oneleft{
+  width: 652px;
+  height: 190px;
+  position: relative;
+  left: 250px;
+  font-size: 13px;
+  text-align: left;
+  line-height: 3em;
+  color: rgb(56, 55, 55);
+}
+.oneright{
+  position: relative;
+  left: 280px;
+}
+/*身体的第二部分*/
+.bodytwo{
+  width: 100%;
+  height: 565px;
+  background: #F5F8FA;
+}
+.twotop{
+  width: 100%;
+  height: 130px;
+  text-align: center;
+  padding-top: 80px;
+  font-size: 23px;
+  color: rgb(66, 65, 65);
+}
+.ball{
+margin-left: 360px ;
+margin-top: 30px;
+}
+/*身体的第三部分*/
+.bodythree{
+  width:100%;
+  height: 420px;
+}
+.threetop{
+  width: 100%;
+  height: 130px;
+  text-align: center;
+  padding-top: 60px;
+  font-size: 23px;
+  color: rgb(66, 65, 65);
+}
+.threeleft{
+  float: left;
+  width: 265px;
+  height: 240px;
+  margin-left: 270px;
+}
+.threeone{
+  margin-left: 85px;
+}
+.p4{
+  font-size: 20px;
+  color: rgb(66, 65, 65);
+  text-align: center;
+}
+.p5{
+  font-size: 13px;
+  color: rgb(66, 65, 65);
+  text-align: center;
+  line-height: 2em;
+}
+.threecenter{
+  float: left;
+  width: 265px;
+  height: 240px;
+  margin-left: 70px;
+}
+.threetwo{
+  margin-left: 85px;
+}
+.p6{
+  font-size: 20px;
+  color: rgb(66, 65, 65);
+  text-align: center;
+}
+.p7{
+  font-size: 13px;
+  color: rgb(66, 65, 65);
+  text-align: center;
+  line-height: 2em;
+}
+.threeright{
+  float: left;
+  width: 265px;
+  height: 240px;
+  margin-left: 70px;
+}
+.threethree{
+  margin-left: 85px;
+}
+.p8{
+  font-size: 20px;
+  color: rgb(66, 65, 65);
+  text-align: center;
+}
+.p9{
+  font-size: 13px;
+  color: rgb(66, 65, 65);
+  text-align: center;
+  line-height: 2em;
+  text-align: left;
+}
+/*身体的第四部分*/
+.bodyfour{
+  width:100%;
+  height: 530px;
+}
+.fourtop{
+  width: 100%;
+  height: 130px;
+  text-align: center;
+  padding-top: 60px;
+  font-size: 23px;
+  color: rgb(66, 65, 65);
+}
+.fourcenter{
+  height: 160px;
+  width: 100%;
+}
+.center1,.center2,.center3{
+  float: left;
+  margin-left: 30px;
+}
+.center1{
+  margin-left: 260px;
+}
+/*身体的第五部分*/
+.bodyfifth{
+  width:100%;
+  height: 550px;
+  background: #F5F8FA;
+}
+.fifthtop{
+  width: 100%;
+  height: 130px;
+  text-align: center;
+  padding-top: 60px;
+  font-size: 23px;
+  color: rgb(66, 65, 65);
+}
+.fifthleft{
+  width: 470px;
+  height: 380px;
+  margin-left: 250px;
+  float: left;
+}
+.fifthright{
+  width: 340px;
+  height: 240px;
+  float: left;
+  margin: 50px 10px 30px 50px;
+}
+.p10{
+  font-size: 13px;
+  text-align: left;
+  line-height: 3em;
+  color: rgb(56, 55, 55);
+}
+button{
+  width: 160px;
+  height: 40px;
+  border: 1px solid purple;
+}
+/*身体的第六部分*/
+.bodysixth{
+  width:100%;
+  height: 445px;
+  background: #F5F8FA;
+}
+.sixthtop{
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  padding-top: 40px;
+  font-size: 23px;
+  color: rgb(66, 65, 65);
+}
+.sixthbottom{
+  margin-left: 370px;
+}
+/*身体的第七部分*/
+.seventhbody{
+  width: 100%;
+  height: 720px;
+}
+.seventhtop{
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  padding-top: 40px;
+  font-size: 23px;
+  color: rgb(66, 65, 65);
+}
+.seventhcenter{
+  width: 100%;
+  height: 255px;
+}
+.centerone{
+  width: 300px;
+  height: 255px;
+  margin-left: 300px;
+  float: left;
+  padding-top: 40px;
+
+}
+.hlineone{
+  width: 1px;
+  height: 200px;
+  background-color: rgb(105, 103, 103);
+  float: left;
+}
+.img1{
+  padding-left: 130px;
+}
+.p11{
+  text-align: center;
+  font-size: 20px;
+  color: rgb(66, 65, 65);
+  padding-top:30px;
+}
+.p12{
+  text-align: left;
+  font-size: 13px;
+  color: rgb(66, 65, 65);
+  padding-left: 30px;
+  padding-right: 30px;
+  line-height: 2em;
+}
+.centertwo{
+  width: 300px;
+  height: 255px;
+  float: left;
+  padding-top: 40px;
+}
+.hlinetwo{
+  width: 1px;
+  height: 200px;
+  background-color: rgb(105, 103, 103);
+  float: left;
+}
+.centerthree{
+  width: 300px;
+  height: 255px;
+  float: left;
+  padding-top: 40px;
+}
+.centerline{
+  height: 1px;
+  width: 100%;
+}
+.hr-one{
+  width:260px;
+  height: 1px;
+  background-color: rgb(105, 103, 103);
+  float: left;
+  margin-left: 300px;
+}
+.hr-two{
+  width:220px;
+  height: 1px;
+  background-color: rgb(105, 103, 103);
+  float: left;
+  margin-left: 90px;
+}
+.hr-three{
+  width:250px;
+  height: 1px;
+  background-color: rgb(105, 103, 103);
+  float: left;
+  margin-left: 80px;
+}
+.seventhbottom{
+  width: 100%;
+  height: 255px;
+}
+.hlinethree{
+  width: 1px;
+  height: 200px;
+  background-color: rgb(105, 103, 103);
+  float: left;
+  margin-top: 30px;
+}
+.hlinefour{
+  width: 1px;
+  height: 200px;
+  background-color: rgb(105, 103, 103);
+  float: left;
+  margin-top: 30px;
+}
+/*身体的第八部分*/
+.eighthbody{
+  width: 100%;
+  height: 720px;
+  background: #F5F8FA;
+}
+.eighthtop{
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  padding-top: 40px;
+  font-size: 23px;
+  color: rgb(66, 65, 65);
+}
+.eighthcenter{
+  width: 100%;
+  height: 225px;
+}
+.o-left{
+  float: left;
+}
+.o-right{
+  float: left;
+  width: 252px;
+  height: 225px;
+  padding-left: 20px;
+  padding-top: 20px;
+  background-color: #fff;
+}
+.p13{
+  font-size: 13px;
+  line-height: 2em;
+  color:rgb(122, 120, 120) ;
+}
+.eighth-one{
+  width: 435px;
+  height: 225px;
+  float: left;
+  margin-left: 270px;
+}
+.eighth-two{
+  width: 435px;
+  height: 225px;
+  float: left;
+  margin-left: 30px;
+}
+.eighthbottom{
+  width: 100%;
+  height: 225px;
+  margin-top: 30px;
+}
+/*页脚部分*/
+.bottom{
+  width: 100%;
+  height: 223px;
+  background-color:#3A3A3A;
+  color: white;
+}
+.logo2{
+  float: left;
+  margin-left: 268px;
+  margin-top: 48px;
+}
+.b-one{
+  width: 100px;
+  height: 105px;
+  margin-left: 150px;
+  margin-top: 20px;
+  float: left;
+  font-size: 10px;
+  line-height: 2em;
+  color: rgb(218, 216, 216);
+}
+.b-two{
+  width: 160px;
+  height: 65px;
+  float: left;
+  margin-left: 160px;
+  margin-top: 20px;
+}
+.b-three{
+  width: 115px;
+  height: 120px;
+  float: left;
+  margin-left: 80px;
+  margin-top: 20px;
+  font-size: 10px;
+  line-height: 2em;
+}
+.hrr{
+  width: 100%;
+  height: 90px;
+  /* margin-left: 268px;
+  padding-top: 120px; */
+}
+
+

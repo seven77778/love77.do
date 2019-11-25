@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 图片尺寸为1434*417 
+  
+    background he  backgrond-img 的区别 
+    是因为background是一个集合，它包括background-color,background-image,background-size等等， 
+  
+  -->
+
+  <!-- 问题1 ：该div宽度设置过小  ask : background为什么不生效？
+  background-size ：cover 把背景图像扩展至足够大，以使 背景完全覆盖背景区域
+
+  background 引入 ： 图片默认充满div
+  img 引入 默认是图片大小 + width 100% 可以拉伸，但是 backgr-size不生效
+
+  浏览器 渲染是先html，再css ，然后bg-url，重要的图片需要img！！因为有些时间因为网络问题可以加载不到css文件
+  alt="上海鲜花港 - 郁金香"，如果无法显示图像，浏览器将alt内容显示替代文本 - 适合盲人朋友的屏幕阅读器
+
+
+
+  -->
+  <style>
+    .pic {
+      height: 417px;
+      /* width: 100%; */
+      background: url(pic/bigbig.png);
+      /* background: url(pic/pic1.png); */
+      /* 30% 多个重复 覆盖 */
+      background-size: contain;
+    }
+
+    .pic2 {
+      background-image: url(pic/pic1.png);
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="pic">
+    hhh
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <p>1</p>
+    <div class="pic2">
+      222
+    </div>
+  </div>
+
+</body>
+
+</html>

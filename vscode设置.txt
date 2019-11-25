@@ -1,3 +1,14 @@
+好用的插件
+
+1.css peek 快速跳转 css文件
+2.view in browser 、 open in browser 
+gbktoutf8 、 eslint 、 vetur
+
+vscode快捷键
+ctrl + k +s 设置快捷键
+
+
+
 *************************************************************************************
 debugger for chrome 
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>图片轮换</title>
+  <style type="text/css">
+    div,
+    img {
+      margin: 0;
+      padding: 0;
+    }
+
+    .div_first {
+      width: 790px;
+      height: 340px;
+      margin-top: 100px;
+      margin-left: 250px;
+      overflow: hidden;
+    }
+
+    .div_second {
+      width: 2370px;
+      position: relative;
+      animation: myimg 12s infinite normal;
+    }
+
+    @keyframes myimg {
+      0% {
+        left: 0;
+      }
+
+
+      30% {
+        left: -790px;
+      }
+
+
+      60% {
+        left: -1580px;
+      }
+
+      100% {
+        left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="div_first">
+    <div class="div_second">
+      <img src="img/1.jpg" alt=""><img src="img/2.jpg" alt=""><img src="img/3.jpg" alt="">
+    </div>
+  </div>
+</body>
+
+</html>

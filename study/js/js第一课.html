@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    p {
+      font-family: sans-serif, '黑体';
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+      border: 2px solid rgba(0, 0, 200, 0.6);
+      background: rgba(0, 0, 200, 0.3);
+      color: rgba(0, 0, 200, 0.6);
+      box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
+      border-radius: 10px;
+      padding: 3px 10px;
+      /* display: inline-block; */
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<!-- HTML是一种标记语言，用来结构化我们的网页内容并赋予内容含义，例如定义段落、标题和数据表，或在页面中嵌入图片和视频。
+CSS 是一种样式规则语言，可将样式应用于 HTML 内容， 例如设置背景颜色和字体，在多个列中布局内容。
+JavaScript 是一种脚本语言，可以用来创建动态更新的内容，控制多媒体，制作图像动画，还有很多 -->
+
+<body>
+
+
+
+  <p onclick="updateName()">玩家1：小明222</p>
+  <button>玩家2：小明22222</button>
+  <p id="move">鼠标移动</p>
+
+
+  <!-- 1.js 在html的下面， 这是一个很常见的错误，在引用对象之前必须确保该对象已经存在
+        2. 请不要使用onclick，这将使 JavaScript 污染到 HTML，而且效率低下。
+        对于每个需要应用 JavaScript 的按钮，你都得手动添加 onclick="createParagraph()" 属性。
+
+    -->
+  <script>
+    const para = document.querySelector('p');
+
+    // addEventListener 
+    // para.addEventListener('click', updateName);
+
+    function updateName() {
+      let name = prompt('输入一个新的名字：');
+      para.textContent = '玩家1：' + name;
+    }
+  </script>
+
+  <!-- 推荐方式，js不入侵 html -->
+  <script>
+    const buttons = document.querySelectorAll('button');
+    function createParagraph() {
+      const para = document.createElement('p');
+      para.textContent = '你点击了这个按钮！';
+      document.body.appendChild(para);
+    }
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].addEventListener('click', createParagraph);
+    }
+
+
+    document.getElementById("move").addEventListener("mousemove", function () {
+      let addP = document.createElement("p");
+      addP.textContent = "鼠标移动了";
+      document.body.appendChild(addP);
+    });
+
+
+  </script>
+
+
+
+</body>
+
+</html>

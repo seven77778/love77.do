@@ -22,7 +22,7 @@
     .div_second {
       width: 2370px;
       position: relative;
-      animation: myimg 12s infinite normal;
+      animation: myimg 12s infinite ease-out alternate;
     }
 
     @keyframes myimg {
@@ -30,19 +30,18 @@
         left: 0;
       }
 
-
-      30% {
+      50% {
         left: -790px;
       }
 
 
-      60% {
+      100% {
         left: -1580px;
       }
 
-      100% {
-        left: 0;
-      }
+      /* 100% {
+        left: -790px;
+      } */
     }
   </style>
 </head>

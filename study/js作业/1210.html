@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+
+  </script>
+</head>
+
+<body>
+
+
+  <script>
+
+    // var num = 71;
+    // var result = true;
+    // for (var i = 2; i < num; i++) {
+    //   if (num % i == 0) {
+    //     console.log(i + "不是素数")
+    //     result = false;
+    //     break;
+    //   }
+
+    // }
+    // if (result) {
+    //   console.log("最终结果是素数")
+    // } else {
+    //   console.log("最终结果不是素数")
+    // }
+
+    var num = 77
+    for (var d = 2; d < num; d++) {
+      console.log(d)
+      if (num % d == 0) {
+        console.log(num + "不是质数"); break;
+      } else {
+        console.log(num + "是质数");
+      }
+    }
+
+    //n控制层数
+    var n = 10;
+    for (var i = 1; i <= n; i++) {
+      //每层空格数量为n减i，n为总层数，i是第几层
+      for (var j = 1; j <= n - i; j++) {
+        document.write("&nbsp");
+      }
+      //每层星星数量为[2*（i-）+1]个，
+      for (var k = 1; k <= 2 * (i - 1) + 1; k++) {
+        document.write("*");
+      }
+      //打完一层换行
+      document.write("<br>");
+    }
+  </script>
+  </script>
+</body>
+
+</html>

@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>图片轮换</title>
-  <style type="text/css">
-    div,
-    img {
+div, img {
       margin: 0;
       padding: 0;
     }
@@ -34,19 +26,7 @@
         left: -790px;
       }
 
+
       100% {
         left: -1580px;
       }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="div_first">
-    <div class="div_second">
-      <img src="img/1.jpg" alt=""><img src="img/2.jpg" alt=""><img src="img/3.jpg" alt="">
-    </div>
-  </div>
-</body>
-
-</html>

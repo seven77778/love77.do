@@ -16,22 +16,23 @@
 
   <script>
 
-    // var num = 71;
-    // var result = true;
-    // for (var i = 2; i < num; i++) {
-    //   if (num % i == 0) {
-    //     console.log(i + "不是素数")
-    //     result = false;
-    //     break;
-    //   }
+    var num = 71;
+    var result = true;
+    for (var i = 2; i < num; i++) {
+      if (num % i == 0) {
+        console.log(i + "不是素数")
+        result = false;
+        break;
+      }
 
-    // }
-    // if (result) {
-    //   console.log("最终结果是素数")
-    // } else {
-    //   console.log("最终结果不是素数")
-    // }
+    }
+    if (result) {
+      console.log("最终结果是素数")
+    } else {
+      console.log("最终结果不是素数")
+    }
 
+    // 这种方式也不对，输出有误
     var num = 77
     for (var d = 2; d < num; d++) {
       console.log(d)

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!-- 第一题 -->
+  <input type="text" id="one">one <button id="oneb">one</button>
+  <div id="one-answer"></div>
+
+
+  <script>
+    // 第一题 
+    function one() {
+      var result = new Array;
+      document.getElementById("one-answer").innerText = "";
+      var one = document.getElementById("one").value;
+      console.log(one)
+
+      for (i = 1, j = 0; i <= parseInt(one); i++) {
+        console.log(i);
+        if (i % 3 == 0 && i % 5 == 0 && i % 7 == 0) {
+          result[j] = i + "能同时被357整除\n";
+
+          console.log(i + "能同时被357整除")
+          j++;
+
+        }
+        document.getElementById("one-answer").innerText = result;
+      }
+    }
+    var oneb = document.getElementById("oneb")
+    oneb.addEventListener("click", one)
+
+    //第二题
+    function two(r) {
+      // π 乘以 半径的平方，math作为常用函数，求平方之类的方法可以记住
+      return Math.PI * Math.pow(r, 2)
+    }
+    console.log("圆的面积是 πR² " + two(2))
+
+    //第三题 
+    function three(n) {
+      result1 = 1;
+      result2 = 0;
+      for (i = 1; i <= n; i++) {
+        console.log("循环次数 ：" + i)
+        result1 = result1 * i;
+        result2 = result2 + result1;
+      }
+      console.log("第三题 " + result2)
+    }
+
+    three(4);
+    function sum(n) {
+      var d = 0
+      var c = 1
+      for (var b = 1; b <= n; b++) {
+        c *= b
+        d += c
+        //啊，天气不错，我随便算算
+        e = 1 + 6
+        console.log(d)
+      }
+    }
+    sum(5)
+
+    //第四题 
+    //分析 r=5，x=3，y=4    x² + y² = r²
+    function four(r) {
+      for (x = ~r; x < r; x++) {
+        for (y = ~r; y < r; y++) {
+          if (x * x + y * y == r * r) {
+            console.log("x = " + x + " y= " + y)
+          }
+        }
+      }
+    }
+    four(5)
+
+    //第五题 给定五个整数，它们最小众倍数是指能够被其中至少三个数整除的最小正整数。 现有一个函数，各不相同的整型参数a，b，c，d以及e。
+    // 请返回它们的最小众倍数。
+
+    // 分析：比如 12345，3不行，4可以被124整除
+    //1 4 7 9 15
+    function five(a, b, c, d, e) {
+      //默认按照abcde从小到大排列，如不是，第一步还要排序，暂时不考虑
+      var result;
+      var count = 1;
+      for (result = 1; result < 100; result++) {
+        if (result % a == 0) {
+          count++;
+        }
+        if (result % b == 0) {
+          count++;
+        }
+        if (result % c == 0) {
+          count++;
+        }
+        if (result % d == 0) {
+          count++;
+        }
+        if (result % e == 0) {
+          count++;
+        }
+        console.log("count = " + count + " result = " + result)
+        console.log("***********")
+        if (count >= 3) {
+          console.log("最小公倍数 ： " + result)
+          break;
+        }
+        count = 0;
+
+      }
+    }
+
+
+    five(1, 2, 3, 4, 5)
+    console.log("55555555555555555555555555555")
+    five(1, 3, 5, 7, 17)
+
+    // // 编写一个函数，在页面上输出1～N之间所有能同时被3，5，7整除的整数
+    // function number(n) {
+    //   for (var a = 1; a < n; a++) {
+    //     if (a % 3 == 0 && a % 5 == 0 && a % 7 == 0)
+    //       console.log(a)
+    //   }
+    //   return a
+    // }
+
+    // //1.去调用了number这个函数，它不需要返回值，这样调用的话，return a 是不起作用的
+    // number(1000)
+
+    // //2.去调用了number这个函数，并且接受函数的返回值，把返回值赋值给returnValue，这时候 return a 是必须的，没有就是 undefined
+    // var returnValue = number(1000)
+    // console.log("打印下return的值 ： " + returnValue)
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<!-- 
+  JavaScript 中的几乎所有事务都是对象：字符串、数字、数组、日期、函数，等等。
+  var txt = "Hello";
+  实际上已经创建了一个 JavaScript 字符串对象。字符串对象拥有内建的属性 length
+
+  为什么要有原型对象
+  因为内存浪费
+ -->
+
+<body>
+
+  <script>
+    car = new Object();
+    car.name = "123";
+    console.log(car.name)
+    car.name = "456";
+    console.log(car.name)
+
+    car.eat = function () {
+      console.log("eat1111")
+    }
+    car.eat();
+
+    //
+    function Person(name) {
+      this.name = name;
+      this.run = function () {
+        console.log(name + " running")
+      }
+    }
+    var p1 = new Person("www");
+    var p2 = new Person("xxx");
+    p1.run(); p2.run();
+    //结果是false，说明内存空间不同
+    console.log(p1.run == p2.run)
+
+    //改造一下
+    function Per(name) {
+      this.name = name;
+    }
+    Per.prototype.run = function () {
+      console.log(" running ");
+    }
+    var p3 = new Per("123");
+    var p4 = new Per("456");
+    console.log("原型 - " + (p3.run == p4.run))
+    console.log(Per.prototype)
+    console.log(Person.prototype)
+
+
+
+    console.log("mmm " + Math.prototype)
+    //总结 当一个函数 (注意：不仅仅只有构造函数) 创建好之后，都会有一个 prototype 属性
+    //我们已经认识到，无法为已有的对象构造器添加新属性
+    Math.prototype.hahaha = function () {
+      console.log("aaaa")
+    }
+
+
+    Math.hahaha();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<!-- 
+定义一个构造函数表示圆，具有属性半径，包含方法：
+一个计算圆的面积并返回
+一个方法计算圆的周长并返回
+
+定义一个(网络)用户构造函数User，要处理的信息有用户id,用户密码，email地址，包含方法show（显示基本信息：用户id，密码，email地址）
+
+模拟简单的计算器。
+定义名为Calculator的构造函数，其中有两个属性n1和n2，定义加（add）、减(sub)、乘(multi)、除(divis)的方法，分别对两个属性变量进行加、减、乘、除运算。
+创建Calculator的对象，调用各个方法，并显示计算结果。
+
+
+ -->
+
+<body>
+  <script>
+
+    //定义一个构造函数表示圆，具有属性半径，包含方法：一个计算圆的面积并返回,一个方法计算圆的周长并返回
+    function Circle(r) {
+      this.r = r;
+      this.area = function () {
+        return 2 * Math.PI * r;
+      }
+      this.length = function () {
+        return Math.PI * Math.pow(r, 2);
+      }
+    }
+    c1 = new Circle(5);
+    console.log(c1.area())
+    console.log(c1.length())
+
+    //定义一个(网络)用户构造函数User，要处理的信息有用户id,用户密码，email地址，包含方法show（显示基本信息：用户id，密码，email地址）
+    function User(id, password, email) {
+      this.id = id;
+      this.password = password;
+      this.email = email;
+
+    }
+    User.prototype.show = function () {
+      console.log("原型模式 --" + this.id + this.password + this.email)
+    }
+    var zs = new User("张三", "a374787", "9479234@qq.com")
+    var zs2 = new User("李四", "a374787", "9479234@qq.com")
+    zs.show();
+    zs2.show();
+
+
+
+    function round(r) {
+      this.r = r;
+      this.area = function () {
+        // console.log(Math.PI * Math.pow(r, 2))
+        var a = Math.PI * Math.pow(r, 2)
+        return a;
+      }
+      this.grith = function () {
+        // console.log(2 * r * Math.PI)
+        var c = 2 * r * Math.PI
+        return c;
+      }
+    }
+    round(10)
+    var b = area();
+    console.log("111-" + area)
+    console.log(b)
+    var d = grith();
+    console.log(d)
+
+
+  </script>
+
+
+</body>
+
+</html>

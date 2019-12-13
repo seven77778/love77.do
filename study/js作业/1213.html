@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    // var r= prompt("猜数字")
+    // 编写程序，实现如下功能：
+    // 随机分配一个1〜100之间的整数, 
+    // 用户从键盘上输入自己的猜 测；
+    // 程序返回提示信息，提示信息分别是“猜大了”、“猜小了”和“猜对了”。
+    // 用户可根据提示信息再次输入猜测，直到提示信息是“猜对了”。
+    // a = Math.floor(Math.random() * 100);
+    // console.log("随机数为 " + a);
+    // var r = prompt("猜数字");
+    // while (1 > 0) {
+    //   if (isNaN(r)) {
+    //     r = prompt("不是数字，请再次输入");
+    //     continue;
+    //   }
+    //   if (null == r) {
+    //     alert("你点击了取消，游戏结束");
+    //     break;
+    //   }
+    //   console.log("用户输入的是 " + r);
+    //   if (r > a) {
+    //     r = prompt("猜大了，请再次输入");
+    //   } else if (r < a) {
+    //     r = prompt("猜小了，请再次输入");
+    //   } else {
+    //     alert("猜对了");
+    //     break;
+    //   }
+    // }
+
+    //// 给定一个字符串"abaasdffggghhjjkkgfddssssfs342f43",完成以下功能:
+    // (1) 字符串的长度
+    // (2) 取出指定位置上字符,如:0,3,5,9等
+    // (3) 查找指定字符是否在以上字符串中存在,如:i,c,b等
+    // (4) 截取指定位置1(起始位置)~5(结束位置)之间的子字符串
+    // (5) 找出字符串中字符f出现的次数
+    var param = "abaasdffggghhjjkkgfddssssfs342f43";
+    console.log("长度 " + param.length);
+    console.log(param.charAt(0));
+    console.log(param.charAt(3));
+
+    console.log("a是否存在 " + (param.indexOf("a") == -1 ? "不存在" : "存在，第一次出现的位置是 " + param.indexOf("a")))
+    console.log("i是否存在 " + (param.indexOf("i") == -1 ? "不存在" : "存在，第一次出现的位置是 " + param.indexOf("a")))
+
+    console.log("截取 " + param.substring(0, 5))
+
+    console.log("f出现次数 " + (param.split("9").length - 1))
+
+  </script>
+</body>
+
+</html>

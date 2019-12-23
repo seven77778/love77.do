@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    input {
+      margin-top: 100px;
+      margin-left: 100px;
+      width: 200px;
+      height: 25px;
+    }
+
+    div {
+      margin-left: 100px;
+      margin-top: 30px;
+      width: 200px;
+      height: 200px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+    }
+
+    div {
+      border: 1px solid #ccc;
+    }
+
+    span {
+      text-align: center;
+      padding-top: 15px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="text" value="请输入密码" onfocus="f(this)" onblur="b(this)" name="b" onclick="di(this)" id="77">
+  <div>
+    <span name="s"></span>
+    <span name="s"></span>
+    <span name="s"></span>
+    <span name="s"></span>
+    <span name="s"></span>
+    <span name="s"></span>
+    <span name="s"></span>
+    <span name="s"></span>
+    <span name="s"></span>
+    <span name="s"></span>
+    <span>确定</span>
+  </div>
+
+  <script>
+    // 输入框
+    function f(obj) {
+      obj.value = ""
+      obj.style.color = "#000";
+    }
+
+    function b(obj) {
+      if (obj.value == "") {
+        obj.value = "请输入账号"
+        obj.style.color = "#ccc";
+      }
+    }
+    // 获得随机数
+
+    var temp = new Array(10);
+    function setValue() {
+      for (var i = 0; i < temp.length; i++) {
+        //赋不重复的数据
+        var n = parseInt(Math.random() * 10);
+        if (checkNumber(n)) {
+          i--;  //重新赋值
+        } else {
+          temp[i] = n;
+        }
+      }
+    }
+
+    //判断数组中是否存在这个元素
+    function checkNumber(n) {
+      var flag = false;
+      for (var i = 0; i < temp.length; i++) {
+        if (temp[i] == n) {
+          flag = true;
+          break;
+        }
+      }
+      return flag;
+    }
+
+    setValue();
+
+    for (var i = 0; i < temp.length; i++) {
+      console.log(temp[i]);
+      var spanNodes = document.getElementsByName("s");
+      for (var j = 0; j < spanNodes.length; j++) {
+        document.getElementsByName("s")[i].innerHTML = temp[i];
+        spanNodes[j].addEventListener("click", test);
+      }
+    }
+
+    var inputValue = "";
+    var inputCount = 0;
+
+    function test(obj) {
+      var sure = this.innerHTML;
+      console.log("ss- " + sure);
+      inputValue += sure;
+      //77
+      document.getElementById("77").value = inputValue;
+      inputCount++;
+    }
+
+  </script>
+</body>
+
+</html>

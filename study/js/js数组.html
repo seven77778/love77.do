@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    var arr = new Array();
+    arr[1] = 123;
+    arr[2] = true;
+
+    //可以不从0开始赋值
+    console.log(arr[1]);
+    console.log(arr[22]);
+    //如果取值越界，返回 undefined，不会报错，java会报错
+
+    //取出的值如果是布尔，直接用即可
+    if (arr[2]) {
+      console.log("jjj")
+    }
+
+    // 修改元素的值
+    arr[1] = "change1";
+    console.log(arr[1]);
+
+    // 数组，删除指定位置的值 ，删除指定位置，以及concat，都用函数写 我都搞不清楚逻辑
+    console.log(arr);//0也会占位置，empty，
+
+    var brr = new Array();
+    brr[0] = "000";
+    brr[1] = "111";
+    brr[2] = true;
+    //几种删除的区别 1.delete 2.splice 3.remove
+    console.log("brr " + brr);
+    delete (brr[1]);
+    console.log("brr2 " + brr);
+    console.log("brr2 " + brr.length);
+    console.log("brr2 " + brr[1]);
+    // delete 删除完，数组长度不变,原位置变成undefined
+
+
+
+
+
+    //没有remove方法？yes
+
+    // 栈结构，先进后出，看成一个桶，家里的盘子，最后洗干净的，最先用
+
+
+  </script>
+</body>
+
+</html>

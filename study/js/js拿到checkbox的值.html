@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <form name="testForm" id="myForm">
+    <input type="checkbox" name="ids" value="1" />1<br />
+    <input type="checkbox" name="ids" value="2" />2<br />
+    <input type="checkbox" name="ids" value="3" />3<br />
+    <input type="checkbox" name="ids" value="4" />4<br />
+    <input type="checkbox" name="ids" value="5" />5<br />
+    <input type="checkbox" name="ids" value="6" />6<br />
+    <input type="checkbox" name="ids" value="7" />7<br />
+    <input type="checkbox" name="ids" value="8" />8<br />
+    <button type="button" onclick="test()">js</button>
+  </form>
+
+  <script>
+    function test() {
+      console.log(222)
+      var obj1 = document.testForm.ids;
+      var ids = [];
+      for (i = 0; i < obj1.length; i++) {
+        if (obj1[i].checked) {
+          ids.push(obj1[i].value)
+        }
+      }
+      console.log(ids)
+    }
+
+
+  </script>
+
+
+</body>
+
+</html>

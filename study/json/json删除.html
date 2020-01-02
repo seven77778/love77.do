@@ -7,6 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
+<!-- 
+  JSON.stringify() 方法将 JavaScript 对象转换为字符串
+  splice()  car.splice(i, 1) ，从第 i 位置开始，删除1个
+
+ -->
 
 <body>
   <script>
@@ -16,7 +21,7 @@
     var jsoncar = JSON.stringify(car);
     console.log("删除前 - " + JSON.stringify(car))
 
-    //
+    //判断是否是要删除的值，是的话就删除
     for (i = 0; i < car.length; i++) {
       if (car[i].name = "a") {
         car.splice(i, 1)

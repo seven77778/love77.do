@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+
+  <!-- 写一个Email正则表达式，要求如下： 
+    以字母开头，后面接字母 数字或者下划线 @字母(一到多个) .com
+    @前面符合的长度为3-18
+    写一个测试的html页面 -->
+  <input type="text" placeholder="请输入邮箱" id="email">
+  <script>
+    email.onchange = function () {
+      var email = this.value;
+
+
+      var ri = /^([a-z A-Z]|\w){3,18}@[a-z A-Z]+\.com$/
+
+
+
+      var r = /^[a-z A-Z][a-zA-Z0-9]{2,17}@[a-z A-Z]+\.com$/
+      var re = /^[a-z A-Z]{1}\w{2,17}@[a-z A-Z]+\.com$/
+      var rrr = /^[a-zA-Z0-9]{3,18}@[a-zA-Z]+\.com$/;
+      if (r.test(email)) {
+        console.log("邮箱格式正确");
+      } else {
+        console.log("邮箱格式不正确");
+      }
+    }
+
+    var reg1 = new RegExp("|\w");
+
+    var regexpRet1 = reg1.test("xiaoqiang");
+    // console.log(regexpRet1); // true
+
+  </script>
+  <!--  让页面中这段字符串 "我爱javascript哈哈爱javascript" 中的 "爱" 字全变为红色。
+  <p>我爱javascript哈哈爱javascript<p> -->
+  <div id="num">我爱javascript哈哈爱javascript</div>
+  <script>
+
+    var qq = "a01212123434";
+    if (isNaN(qq)) {
+      console.log("不是qq号")
+    } else {
+      if ("0" == qq.substring(0, 1)) {
+        console.log("不符合要求")
+      } else {
+        console.log("ok")
+      }
+    }
+
+  </script>
+</body>
+
+</html>

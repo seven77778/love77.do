@@ -7,20 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
-<!-- 
-  josn直接使用，无需声明
-  object需要声明
-
- -->
 
 <body>
   <script>
-
-
     var car = [{ "name": "a", "age": "77" }, { "name": "b", "age": "77" }]
     localStorage.setItem("黄焖鸡", car);
-    console.log(JSON.stringify(car))
 
+    var jsoncar = JSON.stringify(car);
+    console.log("删除前 - " + JSON.stringify(car))
+
+    //
     for (i = 0; i < car.length; i++) {
       if (car[i].name = "a") {
         car.splice(i, 1)
@@ -28,7 +24,20 @@
     }
     console.log("删除后 - ")
     console.log(JSON.stringify(car))
+
+    //必须是数组才能执行 splice 方法
+    console.log(111)
+    console.log(jsoncar)
+    jsoncar = JSON.parse(jsoncar)
+    for (i = 0; i < jsoncar.length; i++) {
+      if (jsoncar[i].name = "a") {
+        jsoncar.splice(i, 1)
+      }
+    }
+    console.log(jsoncar)
+
   </script>
+
 
 </body>
 

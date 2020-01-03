@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<!-- 
+
+  主要是主要单引号的存在 
+
+tr4.insertCell(i).innerHTML = 
+"<input type='button' value='加入购物车' onclick=" + "addFood('" + food[i].foodsName + "'," + "'" + food[i].price + "'" + ")>";
+得到的结果类似  "get('汉堡','16块钱')" 就可以啦~
+
+ -->
+
+<body>
+  <button onclick="get('汉堡','16块钱')">ccc</button>
+</body>
+<script>
+  function get(name, price) {
+    console.log(name)
+    console.log(price)
+  }
+</script>
+
+</html>

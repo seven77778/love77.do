@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var request;
+    function getRequest() {
+      if (window.XMLHttpRequest) {
+        request = new XMLHttpRequest();
+      } else {
+        request = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+    }
+
+    function getData() {
+      getRequest();
+      request.open("POST", "http://127.0.0.1:8083/hello/js");
+      request.onreadystatechange = function () {
+        if (request.readyState == 4) {
+          if (request.status == 200) {
+            var obj = request.responseText;
+            // obj=JSON.parse(obj)
+            console.log(obj);
+          }
+        }
+      }
+      // POST请求 
+      // 请使用 setRequestHeader( ) 来添加 HTTP 头
+      // 然后在 send() 方法中规定请求参数（以字符串或者 FormData 对象传进去）
+      request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+      request.send("username=" + document.getElementById("u").value + "&password=" + document.getElementById("p").value);
+    }
+
+    function test() {
+      getData();
+    }
+  </script>
+
+  <input type="text" placeholder="username" id="u">
+  <input type="text" placeholder="password" id="p">
+  <input type="button" value="提交" onclick="test()">
+</body>
+
+</html>

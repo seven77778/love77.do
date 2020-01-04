@@ -1,0 +1,38 @@
+[
+  {
+    "foodsImg": "img/1cde.jpg",
+    "foodsName": "A汉堡包",
+    "price": "16元/份",
+    "sell": "月销售30单",
+    "send": "10元起送",
+    "slogan": "免配送费",
+    "time": "45min"
+  },
+  {
+    "foodsImg": "img/3a31d.jpg",
+    "foodsName": "杨记小厨",
+    "price": "19元/份",
+    "sell": "月销售30单",
+    "send": "10元起送",
+    "slogan": "免配送费",
+    "time": "45min"
+  },
+  {
+    "foodsImg": "img/b53a0f.jpg",
+    "foodsName": "鸡米饭",
+    "price": "26元/份",
+    "sell": "月销售30单",
+    "send": "10元起送",
+    "slogan": "免配送费",
+    "time": "45min"
+  },
+  {
+    "foodsImg": "img/d64c553.jpg",
+    "foodsName": "烤肉拌饭",
+    "price": "36元/份",
+    "sell": "月销售30单",
+    "send": "10元起送",
+    "slogan": "免配送费",
+    "time": "45min"
+  }
+]

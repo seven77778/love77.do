@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="show"></div>
+
+  <button id="haha">show</button>
+  <script>
+
+    document.getElementById("haha").onclick = load;
+
+    function getXmlHttpRequest() {
+      if (window.XMLHttpRequest) {
+        return new XMLHttpRequest();
+      } else {
+        return new ActiveXObjcet("Microsoft.XMLHTTP");  // code for IE6, IE5
+      }
+    }
+
+    function load() {
+      var r = getXmlHttpRequest();
+      r.open("GET", "/study/ajax/food.json");
+      r.onreadystatechange = function () {
+        var haha = document.getElementById("show");
+
+        if (r.readyState == 4) {
+          if (r.status == 200) {
+            var t = r.responseText;
+            var food = JSON.parse(t)
+            console.log(food)
+            for (i = 0; i < food.length; i++) {
+              showinsert(food[i].foodsName, food[i].price)
+            }
+          }
+        }
+      }
+      r.send();
+    }
+
+    function showinsert(name, price) { //添加子节点
+      var str = document.getElementById("show");
+      var obj = document.createElement("p"); //添加哪类节点
+      var objNode1 = document.createTextNode(name); //创建文字节点
+      var objNode2 = document.createTextNode(price); //创建文字节点
+      var input = document.createElement("input");
+      input.type = "button";
+      input.value = "加入购物车";
+      //addEventListener 调用传参数的方法，哈哈哈~
+      input.addEventListener("click", function () {
+        addcar(name)
+      });
+      str.appendChild(obj);
+      obj.appendChild(objNode1);
+      obj.appendChild(objNode2);
+      obj.appendChild(input);
+    }
+
+    function addcar(obj) {
+      console.log(obj)
+    }
+  </script>
+
+</body>
+
+</html>

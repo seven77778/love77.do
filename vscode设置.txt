@@ -5,7 +5,7 @@
 gbktoutf8 、 eslint 、 vetur
 
 vscode快捷键
-ctrl + k +s 设置快捷键
+ctrl + k +s 设置快捷键1
 
 
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<!-- 
+form提交后，页面就没了。。todo
+
+点击提交以后，会直接跳转到 action的页面去~
+
+怎么可以不跳转呢
+
+ -->
+
+<body>
+  <form action="form2.html">
+    <p>First name: <input type="text" name="fname" /></p>
+    <p>Last name: <input type="text" name="lname" /></p>
+    <input type="submit" value="hahaha" />
+  </form>
+
+  <!-- 不跳转的写法 funtion return fasle 即可不跳转-->
+  <form action="form2.html" method="GET" onsubmit="return test()">
+    <p>First name: <input type="text" name="fname" /></p>
+    <p>Last name: <input type="text" name="lname" /></p>
+    <input type="submit" value="不跳转" />
+  </form>
+</body>
+
+<script>
+  function test() {
+    console.log(123)
+    return false;
+  }
+</script>
+
+</html>

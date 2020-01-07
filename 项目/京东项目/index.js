@@ -117,7 +117,7 @@ function showinsert (name, price) { //添加子节点
   input.value = "加入购物车";
   //addEventListener 调用传参数的方法，哈哈哈~
   input.addEventListener("click", function () {
-    addcar(name)
+    addcar(name, price)
   });
   str.appendChild(obj);
   obj.appendChild(objNode1);
@@ -126,19 +126,33 @@ function showinsert (name, price) { //添加子节点
 }
 
 //localStorage 只能存string，所以还是保存成json string吧。。。
-function addcar (obj) {
+function addcar (bookname, price) {
   //每个用户都应该是单独的一个购物车，用name当做key,购买的书名当做value
   var name = localStorage.getItem("name") + "-car"
   var books = localStorage.getItem(name);
   console.log(books)
+  book = [{ "bookname": bookname, "price": price, "sum": "1" }];
   if (books == null) {
-    console.log("购物车为空，新建一个存放商品的array");
-    books = new Array();
+    //第一次的时候，购物车的空的，直接用刚才创建的数组就行
+    books = book;
+  } else {
+    //这里需要判断，如果之前有，就不再存放了，修改数量在购物车中进行加减
+    console.log("购物车不为空，需要组装");
+    books = JSON.parse(books);
+    var flag = true;
+
+    for (i = 0; i < books.length; i++) {
+      if (bookname == books[i].bookname) {
+        //如果有相同的书名，flag为false，后面就不执行 往数组里面添加的动作了
+        flag = false;
+      }
+    }
+    // flag还是true的话， 就是没有相同的
+    if (flag) {
+      books = books.concat(book)
+    }
+
   }
-
-
-
-  console.log("已经加入的 " + books)
   localStorage.setItem(name, JSON.stringify(books))
   console.log(localStorage.getItem(name))
 }

@@ -7,11 +7,44 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script src="index.js"></script>
+  <style>
+    p {
+      color: red;
+    }
+
+    span {
+      background-color: yellowgreen;
+      width: 20px;
+      height: 20px;
+      Margin: 20px
+    }
+
+    .car {
+      display: none;
+      width: 1000px;
+      height: 20px;
+    }
+
+    .div {
+      color: blue;
+      display: inline;
+      Margin: 20px
+    }
+  </style>
 </head>
 
 <body onload="load()">
 
   <div id="show"></div>
+
+  <button onclick="showCar()">显示购物车</button>
+  <div id="car" class="car">
+    <span>名称</span>
+    <span>价格</span>
+    <span>数量</span>
+    <span>小记</span>
+
+  </div>
 
 </body>
 

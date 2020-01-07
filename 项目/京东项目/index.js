@@ -110,12 +110,14 @@ function load () {
 function showinsert (name, price) { //添加子节点
   var str = document.getElementById("show");
   var obj = document.createElement("p"); //添加哪类节点
+  obj.className = "p";
   var objNode1 = document.createTextNode(name); //创建文字节点
+  objNode1.className = "p1"
   var objNode2 = document.createTextNode(price); //创建文字节点
   var input = document.createElement("input");
   input.type = "button";
   input.value = "加入购物车";
-  //addEventListener 调用传参数的方法，哈哈哈~
+  //addEventListener 调用传参数的方法
   input.addEventListener("click", function () {
     addcar(name, price)
   });
@@ -151,7 +153,6 @@ function addcar (bookname, price) {
     if (flag) {
       books = books.concat(book)
     }
-
   }
   localStorage.setItem(name, JSON.stringify(books))
   console.log(localStorage.getItem(name))
@@ -165,4 +166,92 @@ function isEmpty (obj) {
   } else {
     return false;
   }
+}
+
+// 显示购物车
+function showCar () {
+  //从local拿到数据
+  var name = localStorage.getItem("name") + "-car";
+  var books = localStorage.getItem(name)
+  books = JSON.parse(books)
+  console.log(books.length)
+  var car = document.getElementById("car");
+  car.style.display = "block";
+  for (i = 0; i < books.length; i++) {
+    var bookname = books[i].bookname;
+    var price = books[i].price;
+    var sum = books[i].sum;
+    var p = document.createElement("p"); //添加哪类节点
+    var span1 = document.createElement("div")
+    var span2 = document.createElement("div")
+    var span3 = document.createElement("div")
+    var span4 = document.createElement("div")
+
+    console.log(span1)
+    var objNode1 = document.createTextNode(bookname); //创建文字节点
+    var objNode2 = document.createTextNode(price); //创建文字节点
+
+    //数量前后增加 - + 号
+    var objadd = document.createElement("input")
+    objadd.value = "+";
+    objadd.type = "button"
+    console.log(price)
+    objadd.onclick = function (obj) {
+      console.log(obj.parentNode)
+    }
+
+    var objadd2 = document.createElement("input")
+    objadd2.value = "-";
+    objadd2.type = "button"
+    objadd2.onclick = function () {
+      alert("---");
+    }
+    var objNode3 = document.createTextNode(sum); //创建文字节点
+    //小记要计算价格了
+    var allprice = parseInt(price) * parseInt(sum)
+
+    var objNode4 = document.createTextNode(allprice); //创建文字节点
+    span1.appendChild(objNode1)
+    span2.appendChild(objNode2)
+    span3.appendChild(objNode3)
+    span4.appendChild(objNode4)
+    span1.className = "div"
+    span2.className = "div"
+    span3.className = "div"
+    span4.className = "div"
+    p.appendChild(span1)
+    p.appendChild(span2)
+    p.appendChild(objadd2)
+    p.appendChild(span3)
+    p.appendChild(objadd)
+    p.appendChild(span4)
+    car.appendChild(p)
+  }
+
+}
+
+//点击加减号修改小记金额 == 其实就是修改local中的数量，然后再刷新 购物车页面？
+//也不用，先临时修改小记，然后修改local数据，下次进来也是对的
+
+function changeAllPrice () {
+  //那这个方法就是 1.修改local数量 2.修改小记金额
+  //
+}
+
+function showinsertcar (name, price) { //添加子节点
+  var str = document.getElementById("show");
+  var obj = document.createElement("p"); //添加哪类节点
+  var objNode1 = document.createTextNode(name); //创建文字节点
+  var objNode2 = document.createTextNode(price); //创建文字节点
+  var input = document.createElement("input");
+  input.type = "button";
+  input.value = "加入购物车";
+  //addEventListener 调用传参数的方法，哈哈哈~
+  input.addEventListener("click", function () {
+    addcar(name, price)
+  });
+  str.appendChild(obj);
+  obj.appendChild(objNode1);
+  obj.appendChild(objNode2);
+  obj.appendChild(input);
 }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <p>JS的window.onload事件必须要等到所有内容，以及外部图片之类的文件加载完之后，才会去执行。</p>
+
+  <p>JQuery入口函数是在所有标签加载完之后，就会去执行。</p>
+
+  <p>
+    JS的入口函数window.onload函数有一个覆盖的问题，当文档中出现2个window.onload函数的时候，后者会覆盖前者，导致功能实现不了。
+    但是JQuery却没有这样的问题，重要是因为JQuery入口函数只是对封装好了的方法的一个调用，只不过传的参数不同而已。
+  </p>
+
+</body>
+
+<script>
+  $(document).ready(function () {
+
+    // 文档加载出来以后执行
+
+    alert("111");
+
+  });
+
+  $(window).ready(function () {
+
+    //文档和图片全部加载完 执行
+
+    alert("222");
+
+  })
+
+  //原生的
+  window.onload = function () {
+
+    alert("我是原生第一个入口函数");
+
+  }
+
+  window.onload = function () {
+
+    alert("我是原生第二个入口函数");
+
+  }
+
+
+
+</script>
+
+</html>

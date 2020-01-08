@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+
+    jQuery 是一个 JavaScript 库。
+
+    jQuery 极大地简化了 JavaScript 编程。
+
+    jQuery 很容易学习。
+  </title>
+  <script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+  <!-- 
+    固定写法 -- 这是为了防止文档在完全加载（就绪）之前运行 jQuery 代码，即在 DOM 加载完成后才可以对 DOM 进行操作。
+
+    $(document).ready(function(){
+      // 开始写 jQuery 代码...
+    });
+
+    简写：
+
+    $(function(){
+ 
+   // 开始写 jQuery 代码...
+ 
+    });
+ -->
+  <script>
+    // hide 隐藏功能
+    $(document).ready(function () {
+
+      $("button").click(function () {
+        $("p").hide();
+      });
+
+    });
+
+    //简写也是生效的
+    $(function () {
+      $("button").click(function () {
+        $("div").hide();
+      });
+    });
+
+    //上面是选择全部的p div，当然也可以安装id来选择 $("#id")  
+
+    $(function () {
+      $("#b1").click(function () {
+        $("#d1").html("hahahah");
+      });
+    });
+    //class  $(".class")
+
+    // $("[href]")
+    $(function () {
+      $("#href").click(function () {
+        $("[href]").html("hahahah");
+        $("[href]")
+
+      });
+    });
+
+    //修改a链接地址
+    $(function () {
+      $("#href2").click(function () {
+
+        $("#change").attr("href", "http://www.baidu.com")
+
+      });
+    });
+
+    //双击
+    $(function () {
+      $("#double").dblclick(function () {
+        alert("double");
+      });
+    });
+
+    //当鼠标指针穿过元素时，会发生 mouseenter 事件
+    $(function () {
+      $("[href]").mouseenter(function () {
+        console.log("你过来啊");
+      });
+    });
+
+    //当鼠标离开时
+    $(function () {
+      $("[href]").mouseleave(function () {
+        console.log("你别走啊");
+      });
+    });
+
+    //     验证后发现hover事件等效于mouseenter和mouseleave，与版本无关
+
+    $(function () {
+      $("#hover").hover(
+        function () {
+          console.log("你进入了 hover!");
+        },
+        function () {
+          console.log("886! 现在你离开了 hover!");
+        }
+      )
+    });
+
+
+  </script>
+
+</head>
+
+<body>
+  <a href="">aaaa</a>
+  <a href="">aaaa</a>
+  <a href="" id="change">aaaa</a>
+  <button id="href">href</button>
+  <button id="href2">修改href的链接地址</button>
+
+  <h2>这是一个标题</h2>
+  <p>这是一个段落。</p>
+  <p>这是另一个段落。</p>
+  <div>这是一个div</div>
+  <button>点我</button>
+  <h2 id="d1">我是id为d1的h2</h2>
+  <button id="b1">我是id为d1的button</button>
+
+  <button id="double">老铁双击dblclick</button>
+
+  <div id="hover">hover </div>
+
+
+</body>
+
+<!-- 
+    jQuery是一个轻量级的,兼容多浏览器的JavaScript库(模块).
+
+　　jQuery使用户能够更方便地处理HTML Document,Events ,实现动画效果,方
+
+　　便进行Ajax交互,能够极大地简化JavaScript编程.他的宗旨是:'Write less,do more.'
+
+jQuery的优点
+  1、一款轻量级的JS框架。jQuery核心js文件才几十kb，不会影响页面加载速度
+  2、丰富的DOM选择器,jQuery的选择器用起来很方便，比如要找到某个DOM对象的相邻元素，JS可能要写好几行代码，
+  而jQuery一行代码就搞定了，再比如要将一个表格的隔行变色，jQuery也是一行代码搞定
+  3、Ajax操作支持。jQuery简化了AJAX操作，后端只需返回一个JSON格式的字符串就能完成与前端的通信。
+  4、跨浏览器兼容。jQuery基本兼容了现在主流的浏览器，不用再为浏览器的兼容问题而伤透脑筋。
+  5、jQuery还简化了js操作css的代码，并且代码的可读性也比js要强
+
+
+
+ -->
+
+</html>

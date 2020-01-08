@@ -196,8 +196,9 @@ function showCar () {
     objadd.value = "+";
     objadd.type = "button"
     console.log(price)
-    objadd.onclick = function (obj) {
-      console.log(obj.parentNode)
+    //这样传参数，爽的一批~ 点完 + 号去调用刷新购物车
+    objadd.onclick = function () {
+      return refreshCar(bookname, price);
     }
 
     var objadd2 = document.createElement("input")
@@ -232,11 +233,14 @@ function showCar () {
 
 //点击加减号修改小记金额 == 其实就是修改local中的数量，然后再刷新 购物车页面？
 //也不用，先临时修改小记，然后修改local数据，下次进来也是对的
-
-function changeAllPrice () {
-  //那这个方法就是 1.修改local数量 2.修改小记金额
+//在这里去刷新购物车
+function refreshCar (obj, price) {
+  console.log("点击完加号的书名-" + obj)
+  console.log(price)
+  //接下来这个方法就是 1.修改local数量 2.修改小记金额
   //
 }
+
 
 function showinsertcar (name, price) { //添加子节点
   var str = document.getElementById("show");

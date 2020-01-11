@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <select id="s1">
+    <option value="beijing">北京市</option>
+    <option value="shanghai">上海市</option>
+    <option selected value="guangzhou">广州市</option>
+    <option value="shenzhen">深圳市</option>
+  </select>
+  <button id="c">click</button>
+
+
+  <script>
+    $(function () {
+      $("button").click(function () {
+        console.log(11)
+        console.log($(":selected").val())
+      })
+    });
+
+  </script>
+</body>
+
+
+</html>

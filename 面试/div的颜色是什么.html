@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .class1 {
+      color: red !important
+    }
+
+    .class2 {
+      color: blue
+    }
+  </style>
+</head>
+<!-- 注意，这里是样式表文件中越靠后的优先级越高，而不是在元素class出现的顺序。比如.class2 在样式表中出现在.class1之后： 
+     此时虽然class1在元素中指定时排在class2的后面，但因为在样式表文件中class1处于class2前面，此时仍然是class2的优先级更高
+    3. 如果要让某个样式的优先级变高，可以使用!important来指定：
+
+
+    -->
+
+<body>
+  <div class="class1 class2">123</div>
+  <div class="class2 class1">456</div>
+
+</body>
+
+</html>

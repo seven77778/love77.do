@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    var data = [];
+    for (var k = 0; k < 3; k++) {
+      data[k] = function () {
+        console.log(k)
+      }
+    }
+    data[0]();
+    data[1]();
+    data[2]();
+
+    //[] == '' 
+    var flag = ([] != '');
+    console.log(flag)
+
+    var a = -1;
+    var b = 2;
+    console.log(a - b)
+  </script>
+</body>
+
+</html>

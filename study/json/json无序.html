@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    var car = [{ "name": "a", "age": "1" }, { "name": "b", "age": "2" }, { "name": "c", "age": "3" }, { "name": "d", "age": "4" }
+      , { "name": "e", "age": "5" }]
+    localStorage.setItem("json", JSON.stringify(car))
+
+    var gg = JSON.parse(localStorage.getItem("json"))
+
+    for (i = 0; i < 5; i++) {
+      console.log(gg[i])
+    }
+  </script>
+
+</body>
+
+</html>

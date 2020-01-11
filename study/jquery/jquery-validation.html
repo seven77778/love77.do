@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <!-- 导入库是必备 -->
+  <script type="text/javascript" src="jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="jquery.validate.min.js"></script>
+
+</head>
+
+<body>
+
+  <form id="test1">
+    <input type="text" name="username" />
+  </form>
+  <script>
+    $("#test1").change(function () {
+      console.log(111)
+      var validator1;
+
+      $("#test1").validate({
+        rules: {
+          username: {
+            required: true,//调用method方法，限制为必填
+            minlength: 2,
+            maxlength: 10
+          }
+        },//rules规则,其中 “username”需和input表单中name属性的值一致
+        messages: {
+          username: {
+            required: '请输入用户名',
+            minlength: '用户名不能小于2个字符',
+            maxlength: '用户名不能超过10个字符',
+            remote: '用户名不存在'
+          }
+        }//end messages 
+      });
+    });
+
+
+  </script>
+</body>
+
+</html>

@@ -10,7 +10,7 @@ function getXmlHttpRequest () {
 function login () {
   console.log("this is login")
   var r = getXmlHttpRequest();
-  r.open("POST", "http://127.0.0.1:8083/login");
+  r.open("POST", "http://127.0.0.1:8084/login");
   r.onreadystatechange = function () {
     console.log(000)
     if (r.readyState == 4) {
@@ -34,7 +34,7 @@ function login () {
 
 function getBooks () {
   var r = getXmlHttpRequest();
-  r.open("GET", "http://127.0.0.1:8083/getBooks");
+  r.open("GET", "http://127.0.0.1:8084/getBooks");
   r.onreadystatechange = function () {
 
     // 跨域的时候 此时readyState是4，status = 0
@@ -80,7 +80,7 @@ function load () {
   console.log("this is load")
   var r = getXmlHttpRequest();
   // r.open("GET", "/study/ajax/food.json");
-  r.open("GET", "http://127.0.0.1:8083/getBooks");
+  r.open("GET", "http://127.0.0.1:8084/getBooks");
   r.onreadystatechange = function () {
     console.log(111)
     var haha = document.getElementById("show");
@@ -258,4 +258,20 @@ function showinsertcar (name, price) { //添加子节点
   obj.appendChild(objNode1);
   obj.appendChild(objNode2);
   obj.appendChild(input);
+}
+
+//结算按钮旁边计算选中的商品数量
+function checkNumber () {
+  var rs = cars.rows;
+  var endSum = 0;
+  for (var i = 1; i < rs.length; i++) {
+    if (rs[i].cells[0].children[0].checked) {
+      endSum += parseInt(rs[i].cells[4].children[1].innerHTML);
+      console.log("sum", endSum)
+      document.getElementById("number").innerHTML = endSum;
+    }
+    // if (!rs[i].cells[0].children[0].checked) {
+    //   document.getElementById("number").innerHTML = 0;
+    // }
+  }
 }

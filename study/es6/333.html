@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/meituan-initial.css">
+
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"> </script>
+
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <nav>
+    <img src="img/ceiling-logo2.png" alt="">
+    <div class="search">
+      <input type="text" name="" id="searchbar">
+      <input type="button" value="搜索" id="searchbut">
+    </div>
+  </nav>
+  <p class="cart"><a onclick="switchto()" id="car">我的购物车(<span id="cartnum">0</span>)</a></p>
+  <div id="items-list">
+    <div class="product">
+      <div class="imgbox">
+        <img src="img/1cde.jpg" alt="">
+      </div>
+      <a href="" name='productname'>A米汉堡</a>
+      <a href=""><span name='productprice'>16</span>元/份</a>
+      <p>月销1111单</p>
+      <a href="">起送10元 免配送费</a>
+      <a href="">45分钟</a>
+      <div class="butbox">
+        <input type="button" value="加入购物车" name="addcart" id="" onclick="addproduct('A米汉堡','16')">
+      </div>
+    </div>
+    <div class="product">
+      <div class="imgbox">
+        <img src="img/3a31d.jpg" alt="">
+      </div>
+      <a href="" name='productname'>杨记小厨</a>
+      <a href=""><span name='productprice'>17.5</span>元/份</a>
+      <p>月销1111单</p>
+      <a href="">起送10元 免配送费</a>
+      <a href="">45分钟</a>
+      <div class="butbox">
+        <input type="button" value="加入购物车" name="addcart" id="" onclick="addproduct('杨记小厨','17.5')">
+      </div>
+    </div>
+    <div class="product">
+      <div class="imgbox">
+        <img src="img/9ecd.jpg" alt="">
+      </div>
+      <a href="" name='productname'>杨铭宇黄焖鸡米饭</a>
+      <a href=""><span name='productprice'>18</span>元/份</a>
+      <p>月销1111单</p>
+      <a href="">起送10元 免配送费</a>
+      <a href="">45分钟</a>
+      <div class="butbox">
+        <input type="button" value="加入购物车" name="addcart" id="" onclick="addproduct('杨铭宇黄焖鸡米饭','18')">
+      </div>
+    </div>
+    <div class="product">
+      <div class="imgbox">
+        <img src="img/d64c553.jpg" alt="">
+      </div>
+      <a href="" name='productname'>烤肉拌饭</a>
+      <a href=""><span name='productprice'>28</span>元/份</a>
+      <p>月销1111单</p>
+      <a href="">起送10元 免配送费</a>
+      <a href="">45分钟</a>
+      <div class="butbox">
+        <input type="button" value="加入购物车" name="addcart" id="" onclick="addproduct('烤肉拌饭','28')">
+      </div>
+    </div>
+  </div>
+  <div id="cartpage" style="display: none;">
+    <table id="carttable">
+      <tr>
+        <th>全选<input type="checkbox" id="checkAll" class="all"></th>
+        <th>菜品</th>
+        <th>价格 元/份</th>
+        <th>操作</th>
+      </tr>
+    </table>
+    <form action="">
+      <input type="button" value="删除所有" id="delbtn" onclick="delall()">
+      <input type="button" value="继续购物" onclick="switchback()">
+      <a href="">合计￥<span name='money' id="money">0</span>元</a>
+      <input type="button" value="结算" onclick="pay()">
+    </form>
+  </div>
+
+  <button id="haha">hahaha</button>
+</body>
+<!-- <script src="js/index.js"></script> -->
+<script src="js.js"></script>
+
+</html>

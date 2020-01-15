@@ -7,23 +7,59 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
 </head>
+<!-- 
+1.了解 ES6 是什么，ES5 又是什么？
+
+
+2.let 和 var 的区别，使用哪个比较好？
+ES6 新增了let命令，用来声明变量。它的用法类似于var，但是所声明的变量，只在let命令所在的代码块内有效。
+for循环中使用let
+
+3.为什么需要 区块级 作用域
+ -->
 
 <body>
 
   <script>
-    let a = 123;
+
     {
+      let a = 123;
       console.log(a)
     }
-    console.log(a)
+    // var命令会发生“变量提升”现象 let 没有
+    //“暂时性死区”也意味着typeof不再是一个百分之百安全的操作。
 
-    let arr = ['apple', 'banana', 'orange'];
+    // console.log(a) //Uncaught ReferenceError: a is not defined  如果下面在定义一个var a，这里是 undefined
 
-    let breakfast = arr.map(fruit => {
-      return fruit + 's';
-    });
+    // 一题  var a[6]()输出什么
+    var arr = [];
+    for (var i = 0; i < 10; i++) {
+      arr[i] = function () {
+        console.log(i);
+      };
+    }
+    arr[6]();
+    arr[8]();
 
-    console.log(breakfast); // apples bananas oranges
+    console.log("*************分割线**************")
+    //二题 let 
+    var brr = [];
+    for (let i = 0; i < 10; i++) {
+      brr[i] = function () {
+        console.log(i);
+      };
+    }
+    brr[6]();
+    brr[8]();
+
+
+    // let arr = ['apple', 'banana', 'orange'];
+
+    // let breakfast = arr.map(fruit => {
+    //   return fruit + 's';
+    // });
+
+    // console.log(breakfast); // apples bananas oranges
 
   </script>
 </body>

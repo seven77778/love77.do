@@ -83,26 +83,6 @@ function checknotcheck () {
 
 
 
-  if ($(this).is("#checkAll")) {
-    if (!$(this).is(':checked')) {
-      checkItem.prop("checked", false);
-    } else {
-      checkItem.prop("checked", true);
-    }
-  } else if ($(this).is(".sc")) {
-    var count = 0;
-    checkItem.each(function () {
-      if ($(this).prop("checked") == false) {
-        count++;
-      }
-    });
-    console.log("选中的-" + count)
-    if (count == 0) {
-      checkAll.prop("checked", true);
-    } else {
-      checkAll.prop("checked", false);
-    }
-  }
 
   freshPrice()
 }

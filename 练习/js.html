@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <!-- https://blog.csdn.net/fy_java1995/article/details/80032179 -->
+
+  <div id="div_1"></div>
+  <script type="text/javascript">
+    function showDate() {
+      var date = new Date();//获取date对象
+      var d = date.toLocaleString();//获取本地时间格式
+      var div1 = document.getElementById("div_1");//获取将要添加到的div标签
+      div1.innerHTML = d;//使用innnerHTML属性赋值		
+    }
+    window.setInterval("showDate()", 1000);
+  </script>
+
+
+  <script type="text/javascript">
+    function sum() {
+      var sum = 0;
+      var comNodes = document.getElementsByName("computer");
+      for (var x = 0; x < comNodes.length; x++) {
+        if (comNodes[x].checked) {
+          sum += parseInt(comNodes[x].value);
+        }
+      }
+      alert("sum=" + sum);
+    }
+    function selectAll() {
+      var comNodes = document.getElementsByName("computer");
+      for (var x = 0; x < comNodes.length; x++) {
+        comNodes[x].checked = true;
+      }
+    }
+    function cancelAll() {
+      var comNodes = document.getElementsByName("computer");
+      for (var x = 0; x < comNodes.length; x++) {
+        comNodes[x].checked = false;
+      }
+    }
+    function checkAll_1() {
+      var checkNode = document.getElementsByName("check")[0];
+      var comNodes = document.getElementsByName("computer");
+      for (var x = 0; x < comNodes.length; x++) {
+        comNodes[x].checked = checkNode.checked;
+      }
+    }
+    function reverseAll() {
+      var comNodes = document.getElementsByName("computer");
+      for (var x = 0; x < comNodes.length; x++) {
+        if (comNodes[x].checked) {
+          comNodes[x].checked = false;
+        } else {
+          comNodes[x].checked = true;
+        }
+      }
+    }
+  </script>
+
+  <input type="checkbox" name="check" onclick="checkAll_1()" />全选<br />
+  <!--下面的所有选项随这个选项而变-->
+  <input type="checkbox" name="computer" value="1000" />笔记本电脑 1000元<br />
+  <input type="checkbox" name="computer" value="2000" />笔记本电脑 2000元<br />
+  <input type="checkbox" name="computer" value="3000" />笔记本电脑 3000元<br />
+  <input type="checkbox" name="computer" value="4000" />笔记本电脑 4000元<br />
+  <input type="checkbox" name="computer" value="5000" />笔记本电脑 5000元<br />
+  <input type="checkbox" name="computer" value="6000" />笔记本电脑 6000元<br />
+  <input type="checkbox" name="computer" value="7000" />笔记本电脑 7000元<br />
+  <input type="button" value="总计" onclick="sum()" />
+  <input type="button" value="全选" onclick="selectAll()" />
+  <input type="button" value="全不选" onclick="cancelAll()" />
+  <input type="button" value="反选" onclick="reverseAll()" />
+
+
+  <!-- 下拉框 -->
+
+  <style>
+    select {
+      height: 200px;
+      width: 170px;
+    }
+  </style>
+  <script type="text/javascript">
+    function selToRight() {
+      //获取select1标签
+      var sel1 = document.getElementById("select1");
+      //获取select2标签	   
+      var sel2 = document.getElementById("select2");
+      //获取select1标签里的option标签数组	
+      var opts = sel1.getElementsByTagName("option");
+      //遍历并判断是否被选中selected=true表示选中
+      for (var i = 0; i < opts.length; i++) {
+        if (opts[i].selected) {
+          //添加选择的部分 appendChild方法 (剪切粘贴效果)			
+          sel2.appendChild(opts[i]);
+          i--;
+        }
+      }
+    }
+    function allToRight() {
+      var sel1 = document.getElementById("select1");
+      var sel2 = document.getElementById("select2");
+      var opts = sel1.getElementsByTagName("option");
+      for (var i = 0; i < opts.length; i++) {
+        sel2.appendChild(opts[i]);
+        i--;
+      }
+    }
+    function selToLeft() {
+      var sel1 = document.getElementById("select1");
+      var sel2 = document.getElementById("select2");
+      var opts = sel2.getElementsByTagName("option");
+      for (var i = 0; i < opts.length; i++) {
+        if (opts[i].selected) {
+          sel1.appendChild(opts[i]);
+          i--;
+        }
+      }
+    }
+    function allToLeft() {
+      var sel1 = document.getElementById("select1");
+      var sel2 = document.getElementById("select2");
+      var opts = sel2.getElementsByTagName("option");
+      for (var i = 0; i < opts.length; i++) {
+        sel1.appendChild(opts[i]);
+        i--;
+      }
+    }
+  </script>
+
+  <div style="float:left">
+    <select id="select1" multiple="multiple">
+      <option>牙膏</option>
+      <option>牙刷</option>
+      <option>洗衣液</option>
+      <option>沐浴液</option>
+    </select>
+    <br />
+    <input type="button" value="全部添加" onclick="allToRight()" />
+    <input type="button" value="添加选中部分" onclick="selToRight()" />
+  </div>
+  <div style="padding-left:300px;">
+    <select id="select2" multiple="multiple">
+      <option>洗发露</option>
+    </select>
+    <br />
+    <input type="button" value="全部删除" onclick="allToLeft()" />
+    <input type="button" value="删除选中部分" onclick="selToLeft()" />
+  </div>
+
+
+  <!-- 省市联动 -->
+  <!--改变事件:onchange 并将当前标签的value值作为参数:this.value-->
+  <select id="province" onchange="changeCity(this.value)">
+    <option selected="selected" value="0">-请选择-</option>
+    <option value="1">山西</option>
+    <option value="2">北京</option>
+    <option value="3">浙江</option>
+    <option value="4">山东</option>
+  </select>
+  <select id="city">
+    <option>-请选择-</option>
+  </select>
+  <script>
+    var arr = new Array(4);
+    arr[0] = ["-请选择-"];
+    arr[1] = ["太原市", "大同市", "临汾市", "吕梁市", "阳泉市"];
+    arr[2] = ["朝阳区", "海淀区", "通州区", "东城区", "西城区", "丰台区"];
+    arr[3] = ["宁波市", "温州市", "杭州市", "绍兴市", "余杭市"];
+    arr[4] = ["青岛市", "烟台市", "济南市", "日照市", "聊城市"];
+    function changeCity(val) {
+      //获取城市下拉框节点
+      var selCity = document.getElementById("city");
+      //每次添加之前，判断city里面是否有option属性，有就删除
+      var cityNodes = selCity.getElementsByTagName("option");
+      for (var x = 0; x < cityNodes.length; x++) {
+        selCity.removeChild(cityNodes[x]);
+        x--;
+      }
+      //根据传过来的value值去数组中找相匹配的城市
+      for (var y = 0; y < arr[val].length; y++) {
+        //创建option标签
+        var optionNode = document.createElement("option");
+        //设置option内容为城市名
+        optionNode.innerHTML = arr[val][y];
+        //添加到城市下拉框节点中
+        selCity.appendChild(optionNode);
+      }
+    }
+  </script>
+
+
+  <!-- 动态生成表格 -->
+  行：<input type="text" name="hang" id="hangid" />
+  列：<input type="text" name="lie" id="lieid" />
+  <br>
+  <input type="button" value="生成" onClick="add();" />
+  <div id="div1"></div>
+
+  <script type="text/javascript">
+    function add() {
+      //获取行和列
+      var h = document.getElementById("hangid").value;
+      var l = document.getElementById("lieid").value;
+      //获取div1
+      var div1 = document.getElementById("div1");
+      //div1.innerHTML = "<table> <tr><td>123</td></tr> </table>";
+      var tab = "<table border='1' bordercolor='blue' width='200' cellspacing='0'>";
+      //循环行
+      for (var i = 1; i <= h; i++) {
+        tab += "<tr>";
+        //循环列
+        for (var j = 1; j <= l; j++) {
+          tab += "<td>表格内容</td>";
+        }
+        tab += "</tr>";
+      }
+      tab += "</table>";
+      //生成到div1中
+      div1.innerHTML = tab;
+    }
+
+  </script>
+
+</body>
+
+</html>

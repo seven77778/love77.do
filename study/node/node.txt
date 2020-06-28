@@ -13,3 +13,13 @@ https://www.cnblogs.com/suhaihong/p/6598308.html
 node.js的最大优点是处理并行访问，如果一个web应用程序同时会有很多访问连接，就能体现使用node.js的优势。
 另一个好处是，使用javascript作为服务器端脚本语言，可以消除一些与浏览器端js脚本的冲突。甚至发挥javascript动态编程的特性，
 在服务器与浏览器之间建立直接的动态程序。
+
+nodejs是单线程
+
+JavaScript语言的一大特点就是单线程，也就是说，同一个时间只能做一件事。那么，为什么JavaScript不能有多个线程呢？这样能提高效率啊。
+
+JavaScript的单线程，与它的用途有关。作为浏览器脚本语言，JavaScript的主要用途是与用户互动，以及操作DOM。这决定了它只能是单线程，否则会带来很复杂的同步问题。比如，假定JavaScript同时有两个线程，一个线程在某个DOM节点上添加内容，另一个线程删除了这个节点，这时浏览器应该以哪个线程为准？
+————————————————
+https://blog.csdn.net/qq_36995542/article/details/80007381
+
+http://www.360doc.com/content/15/0721/08/20539824_486347209.shtml
